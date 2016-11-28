@@ -42,7 +42,7 @@
     </nav>
   </header>
   <div class="container">
-      <%= flash.each do |name, msg| %>
+      <% flash.each do |name, msg| %>
         <div class='alert alert-<%="#{name}"%>'>
           <a href="#" class="close" data-dismiss='alert' &#215;></a>
           <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
