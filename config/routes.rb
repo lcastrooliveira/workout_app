@@ -3,4 +3,7 @@ Rails.application.routes.draw do
   get 'dashboard/index'
 
   root to: 'dashboard#index'
+  resources :users do
+    resources :exercises
+  end
 end
